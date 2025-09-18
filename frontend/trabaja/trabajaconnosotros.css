@@ -1,0 +1,236 @@
+html, body {
+    height: 100%;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.trabaja-container {
+    flex: 1 0 auto;
+}
+.footer {
+    flex-shrink: 0;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    position: relative;
+}
+@import url('../components/footer.css');
+/* ====== CONTENEDOR PRINCIPAL ====== */
+.trabaja-container {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ====== HEADER ====== */
+.trabaja-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.titulo-trabaja {
+    font-weight: 900;
+    font-size: 36px;
+    color: #2BB6B8;
+    margin-bottom: 15px;
+}
+
+.descripcion-trabaja {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #213A76;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* ====== LAYOUT DE 2 COLUMNAS ====== */
+.trabaja-content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* ====== CONTACTO ====== */
+.contacto-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contacto-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contacto-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.contacto-card .icono {
+    font-size: 24px;
+    color: #2BB6B8;
+    margin-right: 15px;
+}
+
+.contacto-card h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #213A76;
+    font-weight: 600;
+}
+
+.contacto-card p {
+    margin: 2px 0 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* ====== FORMULARIO ====== */
+.form-card {
+    flex: 2;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 40px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.form-trabaja label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #213A76;
+}
+
+.form-trabaja input,
+.form-trabaja textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1.8px solid #dcdde1;
+    border-radius: 12px;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-trabaja input:focus,
+.form-trabaja textarea:focus {
+    border-color: #2BB6B8;
+    box-shadow: 0 0 6px rgba(43, 182, 184, 0.3);
+}
+
+.form-trabaja textarea {
+    resize: none;
+    min-height: 120px;
+}
+
+.form-trabaja input[type="file"] {
+    border: none;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* ====== BOTÓN ENVIAR ====== */
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2BB6B8, #213A76);
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-submit:hover {
+    background: linear-gradient(135deg, #22999B, #1A2E5D);
+    transform: scale(1.03);
+}
+
+.icono-enviar {
+    font-size: 18px;
+}
+
+/* ===== CHECK POLÍTICA ====== */
+.check-politica {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #213A76;
+}
+
+.check-politica input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.check-politica a {
+    color: #2BB6B8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.check-politica a:hover {
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVO ====== */
+@media (max-width: 900px) {
+    .trabaja-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contacto-info {
+        width: 100%;
+        max-width: 500px;
+        margin-bottom: 30px;
+    }
+
+    .contacto-card {
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .contacto-card .icono {
+        margin-right: 0;
+        margin-bottom: 10px;
+        font-size: 28px;
+    }
+
+    .form-card {
+        width: 100%;
+        max-width: 100%;
+        border: 1.8px solid #dcdde1;
+        /* ✅ borde visible en móviles */
+        box-shadow: none;
+        /* ✅ quitamos sombra en móviles */
+        padding: 20px;
+    }
+}

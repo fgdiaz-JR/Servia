@@ -1,0 +1,410 @@
+/* Copia el CSS proporcionado por el usuario para la página de inicio */
+
+/* ====== BANNER ====== */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+}
+
+.titulo-banner {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 4rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.8);
+}
+
+.lema {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: #f1f1f1;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.banner-indicadores {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+}
+
+.banner-indicadores .punto {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #ffffff80;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.banner-indicadores .punto.activo {
+    background: #2BB6B8;
+    transform: scale(1.3);
+}
+
+@media (max-width: 768px) {
+    .titulo-banner {
+        font-size: 2.5rem;
+    }
+    .lema {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-banner {
+        font-size: 1.8rem;
+    }
+    .lema {
+        font-size: 1rem;
+    }
+}
+
+/* ====== QUIÉNES SOMOS ====== */
+.quienes-somos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.quienes-somos-texto {
+    flex: 1;
+    text-align: justify;
+}
+
+.quienes-somos-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.quienes-somos-img img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-seccion {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: #2BB6B8;
+    margin-bottom: 20px;
+}
+
+.texto-seccion {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: #213A76;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .quienes-somos {
+        flex-direction: column;
+        text-align: center;
+    }
+    .quienes-somos-texto {
+        text-align: center;
+    }
+    .quienes-somos-img img {
+        max-width: 300px;
+    }
+}
+
+/* ====== SERVICIOS POPULARES ====== */
+.servicios-vendidos {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.servicios-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+@media (max-width: 992px) {
+    .servicios-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .servicios-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.servicio-card {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.servicio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ====== IMÁGENES DE SERVICIOS ====== */
+.servicio-img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    border-radius: 0;
+}
+
+/* Contenido con padding */
+.servicio-card-content {
+    padding: 20px;
+}
+
+.servicio-card h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #2BB6B8;
+    margin-bottom: 10px;
+}
+
+.precio {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #213A76;
+    margin-bottom: 20px;
+}
+
+.btn-servicio {
+    background: #2BB6B8;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.btn-servicio:hover {
+    background: #22999b;
+}
+
+/* ====== PRODUCTOS POPULARES ====== */
+.productos-populares {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.productos-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+@media (max-width: 992px) {
+    .productos-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .productos-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ====== BENEFICIOS ====== */
+.beneficios {
+    background-color: #F2F2F2;
+    padding: 15px 10px;
+    margin-top: 0;
+}
+
+.beneficios-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.beneficio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.beneficio-icon {
+    font-size: 3rem;
+    color: #2BB6B8;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.beneficio-icon:hover {
+    transform: scale(1.2);
+    color: #213A76;
+}
+
+.beneficio p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #213A76;
+    margin: 0;
+}
+
+.titulo-beneficios {
+    text-align: center;
+    margin: 60px 0 20px;
+    color: #2BB6B8;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .beneficios-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .beneficios-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ====== MOSAICO FOTOS ====== */
+.mosaico-fotos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.mosaico-fotos img {
+    width: 100%;
+    height: 350px;
+    object-fit: contain;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+}
+
+.mosaico-fotos img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+    .mosaico-fotos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .mosaico-fotos {
+        grid-template-columns: 1fr;
+    }
+    .mosaico-fotos img {
+        height: auto;
+        max-height: 300px;
+    }
+}
+
+/* ====== INFO CONTACTO ====== */
+.info-contacto {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px auto 80px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.contacto-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex: 1 1 250px;
+}
+
+.contacto-icon {
+    font-size: 2rem;
+    color: #2BB6B8;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.contacto-card:hover .contacto-icon {
+    transform: scale(1.2);
+    color: #213A76;
+}
+
+.contacto-card p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
+    color: #213A76;
+    margin: 0;
+}

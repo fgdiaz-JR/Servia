@@ -1,0 +1,40 @@
+@import url('../components/navbar.css');
+@import url('../components/footer.css');
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f8f8f8;
+}
+.marcas {
+  max-width: 900px;
+  margin: 3em auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(26,42,79,0.08);
+  padding: 2em;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+.marcas.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.marcas-grid {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  margin-top: 2em;
+}
+.marca {
+  background: #e0e7ef;
+  border-radius: 12px;
+  padding: 1em;
+  text-align: center;
+  box-shadow: 0 1px 8px rgba(26,42,79,0.06);
+}
+.marca img {
+  width: 100%;
+  max-width: 150px;
+  border-radius: 8px;
+}

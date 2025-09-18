@@ -1,0 +1,22 @@
+/* ====== ALERTAS PERSONALIZADAS ====== */
+.alerta {
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin: 20px auto;
+    max-width: 600px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(43, 182, 184, 0.08);
+}
+.alerta-error {
+    background: #ffeaea;
+    color: #d32f2f;
+    border: 1.5px solid #d32f2f;
+}
+.alerta-exito {
+    background: #eaffea;
+    color: #388e3c;
+    border: 1.5px solid #388e3c;
+}

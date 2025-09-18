@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SERVIASEO - Contacto</title>
+  <link rel="stylesheet" href="components/navbar.css" />
+  <link rel="stylesheet" href="contacto/contacto.css" />
+  <link rel="stylesheet" href="contacto/alerta.css" />
+</head>
+<body>
+  <div id="navbar-container"></div>
+  <div class="contacto-container animate-on-scroll">
+    <div class="contacto-header">
+      <h2 class="titulo-contacto">Contáctanos</h2>
+      <p class="descripcion-contacto">
+        Estamos aquí para resolver tus dudas, recibir tus comentarios y atender tus solicitudes.
+        Completa el formulario y te responderemos lo más pronto posible.
+      </p>
+    </div>
+    <div class="form-card">
+      <div id="contacto-alerta"></div>
+      <form id="contacto-form" class="form-contacto">
+        <div class="form-group">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Ej: Valeria Ramírez" />
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required placeholder="tuemail@ejemplo.com" />
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="+57 300 123 4567" />
+        </div>
+        <div class="form-group">
+          <label for="asunto">Asunto</label>
+          <input type="text" id="asunto" name="asunto" required placeholder="Motivo de tu mensaje" />
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit">
+          Enviar
+          <span class="icono-enviar"><svg width="18" height="18" fill="#fff" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></span>
+        </button>
+      </form>
+    </div>
+  </div>
+  <div id="footer-container"></div>
+  <script src="components/navbar.js"></script>
+  <script src="contacto/scripts.js"></script>
+</body>
+</html>
